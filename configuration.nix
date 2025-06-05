@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -121,11 +121,29 @@
     bat
     starship
     vscode
+    wl-clipboard
     lazygit
+    brave
     astyle
     stylua
-    # nerd-fonts.jetbrains-mono
-    # nerd-fonts.martian-mono
+    ghostty
+    rofi-wayland
+    waybar
+    hyprpaper
+    hyprlock
+    hyprshot
+    ksnip
+    gnome-keyring
+    qbittorrent
+    # rocmPackages.rocm-smi
+    libsecret
+    bitwarden
+    parted
+    ntfs3g
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.martian-mono
+    # protonvpn-gui
+    # protonmail-desktop
   ];
 
   # Global git configuration
