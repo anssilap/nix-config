@@ -55,6 +55,8 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  programs.hyprland.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = 1;
 
   # Configure keymap in X11
   services.xserver.xkb = {
