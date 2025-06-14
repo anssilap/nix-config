@@ -95,10 +95,10 @@
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
+    /etc/nixos/hardware-configuration.nix
   ];
 
   # imports = [
-  #   /etc/nixos/hardware-configuration.nix
   # ];
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
