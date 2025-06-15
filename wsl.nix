@@ -8,7 +8,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  networking.hostName = "wsl";
+  wsl.enable = true;
+  wsl.defaultUser = "nixos";
+
+  networking.hostName = "nix-wsl";
 
   time.timeZone = "Europe/Helsinki";
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -30,9 +33,6 @@
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
 
-  wsl.enable = true;
-  wsl.defaultUser = "nixos";
-
   services.openssh.enable = true;
 
   # Configure keymap in X11
@@ -50,10 +50,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Packages installed globally for all users
   environment.systemPackages = with pkgs; [
-    # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     gcc
     neovim
     wget
@@ -80,7 +78,6 @@
     ntfs3g
   ];
 
-  # Global git configuration
   programs.git = {
     enable = true;
     lfs.enable = true;
