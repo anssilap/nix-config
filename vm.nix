@@ -65,6 +65,10 @@
     starship
     vscode
     wl-clipboard
+    luarocks
+    unzip
+    nodejs_22
+    tree-sitter
     lazygit
     brave
     astyle
