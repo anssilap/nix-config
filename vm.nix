@@ -82,7 +82,6 @@
     ksnip
     gnome-keyring
     qbittorrent
-    # rocmPackages.rocm-smi
     libsecret
     bitwarden
     parted
